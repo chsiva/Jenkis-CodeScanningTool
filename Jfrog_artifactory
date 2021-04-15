@@ -1,0 +1,7 @@
+Jfrog Artifactory start - If vm is rebooted
+
+cd /opt/artifactory/app/bin/
+ps -ef | grep artifactory
+./artifactoryctl start
+ps -ef | grep artifactory
+history
