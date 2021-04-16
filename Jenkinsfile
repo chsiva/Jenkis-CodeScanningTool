@@ -21,7 +21,7 @@ pipeline {
          stage('ArtifactDownload') {
             steps {
               sh '''
-              curl -u ${USERNAME}:${PASSWORD} -O "http://localhost:8081/artifactory/test/artifactory.tar.gz" /tmp/
+              curl -u ${USERNAME}:${PASSWORD} "http://localhost:8081/artifactory/test/artifactory.tar.gz" -o /tmp/artifactory.tar.gz
               '''
             }
         }
