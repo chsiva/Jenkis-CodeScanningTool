@@ -14,7 +14,7 @@ pipeline {
             steps {
               sh '''
               cp /opt/artifactory.tar.gz ${WORKSPACE}/
-              curl -u ${USERNAME}:${PASSWORD} -T ${WORKSPACE}/artifactory.tar.gz "http://104.197.247.41:8081/artifactory/test/"
+              curl -u ${USERNAME}:${PASSWORD} -T ${WORKSPACE}/artifactory.tar.gz "http://localhost:8081/artifactory/test/"
               '''
             }
         }
