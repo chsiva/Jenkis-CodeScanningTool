@@ -3,8 +3,8 @@ pipeline {
 
 
     parameters {
-        string(defaultValue: admin, description: 'provide Jfrog Username', name: 'USERNAME')
-        password(defaultValue: abc*12, description: 'provide Jfrog Password', name: 'PASSWORD')
+        string(defaultValue: 'admin', description: 'provide Jfrog Username', name: 'USERNAME')
+        password(defaultValue: 'abc*12', description: 'provide Jfrog Password', name: 'PASSWORD')
     }
 
 
