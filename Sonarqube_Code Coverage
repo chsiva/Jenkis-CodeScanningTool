@@ -1,16 +1,11 @@
 sudo yum -y install epel-release
-    2  sudo yum -y update
-    3  clear
-    4  wget --no-cookies --no-check-certificate --header "Cookie:oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d
+sudo yum -y update
+yum install -y wget
+wget --no-cookies --no-check-certificate --header "Cookie:oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d
 096fa80163/jdk-8u131-linux-x64.rpm"
-    5  yum install -y wget
-    6  wget --no-cookies --no-check-certificate --header "Cookie:oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d
-096fa80163/jdk-8u131-linux-x64.rpm"
-    7  clear
-    8  sudo yum -y localinstall jdk-8u131-linux-x64.rpm
-    9  java -version
-   10  clear
-   11  sudo rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
+sudo yum -y localinstall jdk-8u131-linux-x64.rpm
+java -version
+sudo rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
    12  sudo rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/postgresql96-9.6.21-1PGDG.rhel7.x86_64.rpm
    13  yum install https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm -y
    14  yum install postgresql96 postgresql96-server postgresql96-contrib postgresql96-libs -y
