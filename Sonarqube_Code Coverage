@@ -1,1 +1,44 @@
-
+sudo yum -y install epel-release
+    2  sudo yum -y update
+    3  clear
+    4  wget --no-cookies --no-check-certificate --header "Cookie:oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d
+096fa80163/jdk-8u131-linux-x64.rpm"
+    5  yum install -y wget
+    6  wget --no-cookies --no-check-certificate --header "Cookie:oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d
+096fa80163/jdk-8u131-linux-x64.rpm"
+    7  clear
+    8  sudo yum -y localinstall jdk-8u131-linux-x64.rpm
+    9  java -version
+   10  clear
+   11  sudo rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
+   12  sudo rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/postgresql96-9.6.21-1PGDG.rhel7.x86_64.rpm
+   13  yum install https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm -y
+   14  yum install postgresql96 postgresql96-server postgresql96-contrib postgresql96-libs -y
+   15  clear
+   16  sudo /usr/pgsql-9.6/bin/postgresql96-setup initdb
+   17  sudo vi /var/lib/pgsql/9.6/data/pg_hba.conf
+   18  sudo systemctl start postgresql-9.6
+   19  sudo systemctl enable postgresql-9.6
+   20  sudo systemctl status postgresql-9.6
+   21  sudo passwd postgres
+   22  su - postgres
+   23  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.4.zip
+   24  clear
+   25  ls
+   26  mv sonarqube-6.4.zip /opt/
+   27  cd /opt/
+   28  ls
+   29  sudo yum -y install unzip
+   30  sudo unzip sonarqube-6.4.zip
+   31  sudo mv /opt/sonarqube-6.4 /opt/sonarqube
+   32  clear
+   33  sudo vi /opt/sonarqube/conf/sonar.properties
+   34  sudo vi /etc/systemd/system/sonar.service
+   35  sudo systemctl start sonar
+   36  sudo systemctl enable sonar
+   37  sudo systemctl status sonar
+   38  netstat -pan | grep 4529
+   39  ps -elf | grep sonar
+   40  netstat -pan | less
+   41  curl -Is http://localhost:9001
+   42  history
